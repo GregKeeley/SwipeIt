@@ -15,6 +15,7 @@
 		88013209257ACA6B00A53395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88013207257ACA6B00A53395 /* LaunchScreen.storyboard */; };
 		88013214257ACA6C00A53395 /* SwipeItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88013213257ACA6C00A53395 /* SwipeItTests.swift */; };
 		8801321F257ACA6C00A53395 /* SwipeItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801321E257ACA6C00A53395 /* SwipeItUITests.swift */; };
+		88ED1AD3257BE05200E6DB5E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED1AD2257BE05200E6DB5E /* SwipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8801321A257ACA6C00A53395 /* SwipeItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8801321E257ACA6C00A53395 /* SwipeItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeItUITests.swift; sourceTree = "<group>"; };
 		88013220257ACA6C00A53395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88ED1AD2257BE05200E6DB5E /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				880131FE257ACA6900A53395 /* SceneDelegate.swift */,
 				88013200257ACA6900A53395 /* ViewController.swift */,
 				88013202257ACA6900A53395 /* Main.storyboard */,
+				88ED1AD2257BE05200E6DB5E /* SwipeViewController.swift */,
 				88013205257ACA6B00A53395 /* Assets.xcassets */,
 				88013207257ACA6B00A53395 /* LaunchScreen.storyboard */,
 				8801320A257ACA6B00A53395 /* Info.plist */,
@@ -261,6 +264,7 @@
 				88013201257ACA6900A53395 /* ViewController.swift in Sources */,
 				880131FD257ACA6900A53395 /* AppDelegate.swift in Sources */,
 				880131FF257ACA6900A53395 /* SceneDelegate.swift in Sources */,
+				88ED1AD3257BE05200E6DB5E /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
