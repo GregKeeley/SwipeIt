@@ -64,11 +64,14 @@
                             <constraint firstItem="bwC-Ao-mBZ" firstAttribute="leading" secondItem="dyS-Km-9dM" secondAttribute="leading" constant="4" id="Oay-Xk-0NH"/>
                             <constraint firstItem="bwC-Ao-mBZ" firstAttribute="centerY" secondItem="YxE-Vt-JpH" secondAttribute="centerY" id="R7Y-Ks-6eW"/>
                             <constraint firstItem="YxE-Vt-JpH" firstAttribute="leading" secondItem="6tt-lO-qPL" secondAttribute="leading" id="iFp-ts-VTN"/>
-                            <constraint firstItem="dyS-Km-9dM" firstAttribute="trailing" secondItem="bwC-Ao-mBZ" secondAttribute="trailing" constant="304" id="iLB-jZ-dQT"/>
                             <constraint firstItem="dyS-Km-9dM" firstAttribute="bottom" secondItem="bwC-Ao-mBZ" secondAttribute="bottom" constant="4" id="jIH-zg-acd"/>
                             <constraint firstItem="YxE-Vt-JpH" firstAttribute="top" secondItem="6tt-lO-qPL" secondAttribute="top" id="uyR-8E-zar"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="swipableView" destination="bwC-Ao-mBZ" id="FCT-IU-iLl"/>
+                        <outlet property="viewToMove" destination="bwC-Ao-mBZ" id="6ZG-n9-Que"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXy-jO-S0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="AYR-m6-Hvb">
