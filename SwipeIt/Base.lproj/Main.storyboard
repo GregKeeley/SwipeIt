@@ -34,6 +34,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonContainerView" destination="c0D-Bj-Rhl" id="Je9-hS-eTD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,15 +110,10 @@
                                     <constraint firstAttribute="width" secondItem="FoX-as-Zho" secondAttribute="height" multiplier="1:1" id="tPl-8d-y0y"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="buttonPressed:" destination="a3f-dh-aSm" eventType="touchUpInside" id="DFn-IN-y4D"/>
                                     <action selector="buttonToMove:" destination="5fU-bp-rdP" eventType="touchUpInside" id="oLw-hJ-RCk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greg was here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTd-7O-YO1">
-                                <rect key="frame" x="248" y="4" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FXw-2H-yFc"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -123,13 +121,11 @@
                             <constraint firstItem="Cmf-1m-3s7" firstAttribute="top" secondItem="RmI-Te-YUG" secondAttribute="top" id="2me-Pf-FKg"/>
                             <constraint firstItem="Cmf-1m-3s7" firstAttribute="leading" secondItem="FXw-2H-yFc" secondAttribute="leading" id="3AQ-hb-cGM"/>
                             <constraint firstItem="Cmf-1m-3s7" firstAttribute="trailing" secondItem="FXw-2H-yFc" secondAttribute="trailing" id="4hJ-Y9-0Vk"/>
-                            <constraint firstAttribute="trailing" secondItem="QTd-7O-YO1" secondAttribute="trailing" constant="16" id="BO6-sX-h6b"/>
                             <constraint firstItem="FoX-as-Zho" firstAttribute="leading" secondItem="RmI-Te-YUG" secondAttribute="leading" constant="4" id="RsH-IB-gDb"/>
                             <constraint firstAttribute="bottom" secondItem="FoX-as-Zho" secondAttribute="bottom" constant="4" id="bro-d2-wxE"/>
                             <constraint firstItem="FoX-as-Zho" firstAttribute="top" secondItem="RmI-Te-YUG" secondAttribute="top" constant="4" id="c9C-CY-L5V"/>
                             <constraint firstItem="FoX-as-Zho" firstAttribute="centerY" secondItem="RmI-Te-YUG" secondAttribute="centerY" id="dcS-9O-wJH"/>
                             <constraint firstItem="Cmf-1m-3s7" firstAttribute="bottom" secondItem="FXw-2H-yFc" secondAttribute="bottom" id="gQt-2v-bKT"/>
-                            <constraint firstItem="QTd-7O-YO1" firstAttribute="top" secondItem="RmI-Te-YUG" secondAttribute="top" constant="4" id="oml-5P-GIR"/>
                         </constraints>
                     </view>
                     <connections>
