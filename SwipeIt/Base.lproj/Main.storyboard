@@ -23,6 +23,13 @@
                                     <segue destination="sWF-sj-GQY" kind="embed" id="Wzn-9S-7Bz"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-Bj-Rhl">
+                                <rect key="frame" x="20" y="416" width="374" height="73"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="a3f-dh-aSm" kind="embed" id="SA8-yx-UrX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,7 +76,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="swipableView" destination="bwC-Ao-mBZ" id="FCT-IU-iLl"/>
                         <outlet property="viewToMove" destination="bwC-Ao-mBZ" id="6ZG-n9-Que"/>
                     </connections>
                 </viewController>
@@ -80,12 +86,68 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="605.79710144927537" y="549.77678571428567"/>
+            <point key="canvasLocation" x="281" y="541"/>
+        </scene>
+        <!--Swipe Button View Controller-->
+        <scene sceneID="Bhe-px-hnM">
+            <objects>
+                <viewController id="a3f-dh-aSm" customClass="SwipeButtonViewController" customModule="SwipeIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RmI-Te-YUG">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-1m-3s7">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoX-as-Zho">
+                                <rect key="frame" x="4" y="4" width="65" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FoX-as-Zho" secondAttribute="height" multiplier="1:1" id="tPl-8d-y0y"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonToMove:" destination="5fU-bp-rdP" eventType="touchUpInside" id="oLw-hJ-RCk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greg was here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTd-7O-YO1">
+                                <rect key="frame" x="248" y="4" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FXw-2H-yFc"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="Cmf-1m-3s7" firstAttribute="top" secondItem="RmI-Te-YUG" secondAttribute="top" id="2me-Pf-FKg"/>
+                            <constraint firstItem="Cmf-1m-3s7" firstAttribute="leading" secondItem="FXw-2H-yFc" secondAttribute="leading" id="3AQ-hb-cGM"/>
+                            <constraint firstItem="Cmf-1m-3s7" firstAttribute="trailing" secondItem="FXw-2H-yFc" secondAttribute="trailing" id="4hJ-Y9-0Vk"/>
+                            <constraint firstAttribute="trailing" secondItem="QTd-7O-YO1" secondAttribute="trailing" constant="16" id="BO6-sX-h6b"/>
+                            <constraint firstItem="FoX-as-Zho" firstAttribute="leading" secondItem="RmI-Te-YUG" secondAttribute="leading" constant="4" id="RsH-IB-gDb"/>
+                            <constraint firstAttribute="bottom" secondItem="FoX-as-Zho" secondAttribute="bottom" constant="4" id="bro-d2-wxE"/>
+                            <constraint firstItem="FoX-as-Zho" firstAttribute="top" secondItem="RmI-Te-YUG" secondAttribute="top" constant="4" id="c9C-CY-L5V"/>
+                            <constraint firstItem="FoX-as-Zho" firstAttribute="centerY" secondItem="RmI-Te-YUG" secondAttribute="centerY" id="dcS-9O-wJH"/>
+                            <constraint firstItem="Cmf-1m-3s7" firstAttribute="bottom" secondItem="FXw-2H-yFc" secondAttribute="bottom" id="gQt-2v-bKT"/>
+                            <constraint firstItem="QTd-7O-YO1" firstAttribute="top" secondItem="RmI-Te-YUG" secondAttribute="top" constant="4" id="oml-5P-GIR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="swipeButtonToMove" destination="FoX-as-Zho" id="raW-7j-0OD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVb-7y-gW5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5fU-bp-rdP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="540.73660714285711"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
