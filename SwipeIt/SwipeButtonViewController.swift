@@ -37,8 +37,6 @@ class SwipeButtonViewController: UIViewController {
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.touches?.removeAll()
-        // After touches end, what do I want to do here?
-        print("Touches ended")
         resetButtonToOriginLocation()
     }
     override func viewDidLoad() {
@@ -56,17 +54,29 @@ class SwipeButtonViewController: UIViewController {
         maxViewCoords.x = view.frame.maxX - 4
     }
     private func resetButtonToOriginLocation() {
-        swipeButtonToMove.frame.origin.x = minViewCoords.x
+        if location.x > maxViewCoords.x / 2 {
+            swipeButtonToMove.center.x = maxViewCoords.x - (swipeButtonToMove.frame.width + 4)
+        } else {
+            swipeButtonToMove.frame.origin.x = minViewCoords.x
+        }
     }
     private func moveViewWithTouch(_ touches: Set<UITouch>) {
+        
         guard let touch = touches.first else {
             return
         }
         location = touch.location(in: self.view)
+        
+        
+    // These two if statements check to see if the location of the touch, and the button are within the limits of the its parents view.
+        // If the location being touched is greater than the minimum coordinates, and less than max coordinates, continue
         if location.x > minViewCoords.x && location.x < maxViewCoords.x {
+            // If leading edge (essentially?) is greater than the minimum coordinates, and less the max, continue
             if swipeButtonToMove.frame.minX >= minViewCoords.x && swipeButtonToMove.frame.maxX <= maxViewCoords.x {
+                // This will move the button to the location being touched
                 swipeButtonToMove.center.x = location.x
             } else {
+                // Otherwise, lets put the button back where it started
                 resetButtonToOriginLocation()
             }
         } else {
